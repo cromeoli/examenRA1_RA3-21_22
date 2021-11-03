@@ -39,16 +39,12 @@ def comprueba_rango(edad, mes):
     """
     if 10 < edad <= 12:
         return 0
-
     elif 8 < edad <= 10 and mes % 2 == 0:
         return 1
-
     elif 8 < edad <= 10 and mes % 2 != 0:
         return 2
-
     elif 6 <= edad <= 8 and mes % 2 == 0:
         return 3
-
     elif 6 <= edad <= 8 and mes % 2 != 0:
         return 4
 def comprueba_edad(edad):
@@ -64,7 +60,6 @@ def comprueba_edad(edad):
             return False
         elif int(edad) > 12:
             return False
-
     except ValueError:
         return False
 def comprueba_mes(mes):
@@ -78,7 +73,6 @@ def comprueba_mes(mes):
             return False
         elif int(mes) > 12:
             return False
-
     except ValueError:
         return False
 def tabla_corresponde(caso):
