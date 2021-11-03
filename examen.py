@@ -12,7 +12,6 @@ def tablas(num1, num2, parimpar):
     :return:
     """
     for n in range(num1, num2):
-
         if parimpar == 1:
             if n % 2 == 0:
                 continue
@@ -21,7 +20,6 @@ def tablas(num1, num2, parimpar):
                 continue
         if parimpar == 0:
             n = n
-
         for i in range(10):
             if i == 0:
                 print("\n", "TABLA DEL", n, "\n"
@@ -54,11 +52,7 @@ def comprueba_edad(edad):
     :return:
     """
     try:
-        if int(edad) < 0:
-            return False
-        elif int(edad) < 6:
-            return False
-        elif int(edad) > 12:
+        if int(edad) < 0 or int(edad) < 6 or int(edad) > 12:
             return False
     except ValueError:
         return False
@@ -69,9 +63,7 @@ def comprueba_mes(mes):
     :return:
     """
     try:
-        if int(mes) < 0:
-            return False
-        elif int(mes) > 12:
+        if int(mes) < 0 or int(mes) > 12:
             return False
     except ValueError:
         return False
@@ -120,10 +112,8 @@ def introduce_edad(edad,mes):
     while True:
         if comprueba_edad(edad) == False:
             print("No se contempla esa edad")
-
         if comprueba_mes(mes) == False:
             print("Mes no válido")
-
         if comprueba_edad(edad) == False or comprueba_mes(mes) == False:
             print("Fallo al introducir los datos.")
             continue
@@ -145,7 +135,7 @@ def main():
 
     caso = comprueba_rango(int(edad), int(mes))
     tabla = tabla_corresponde(caso)
-    print(f"{alumno}, le corresponden las siguientes tablas", imprime_tabla(tabla))
+    print(f"\n{alumno}, le corresponden las siguientes tablas", imprime_tabla(tabla))
 
 
     comprueba_rango(int(edad), int(mes))
@@ -154,6 +144,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
