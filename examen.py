@@ -52,7 +52,7 @@ def comprueba_edad(edad):
     :return:
     """
     try:
-        if int(edad) < 0 or int(edad) < 6 or int(edad) > 12:
+        if int(edad) < 6 or int(edad) > 12:
             return False
     except ValueError:
         return False
